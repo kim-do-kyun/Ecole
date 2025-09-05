@@ -5,7 +5,6 @@ queue = list(range(1, n+1))
 
 while len(queue) > 1:
     queue.pop(0)
-    
     queue.append(queue[0])
     queue.pop(0)
 
