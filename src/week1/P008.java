@@ -18,7 +18,6 @@ public class P008 {
         for (int i = 1; i <= n; i++) {
             queue.add(i);
         }
-
         // 카드가 1장 남을 때까지 반복
         while (queue.size() > 1) {
             queue.poll();
