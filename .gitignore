@@ -1,0 +1,14 @@
+# JetBrains IDE (IntelliJ, PyCharm...)
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Build output (Java/Kotlin...)
+out/
+
+*.pdf
