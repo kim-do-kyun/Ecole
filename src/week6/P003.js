@@ -1,11 +1,5 @@
-/**
- * 최소 공통 조상 (LCA) - 희소 배열(Sparse Array)을 이용한 O(log N) 쿼리
- * Node.js 환경에 최적화된 코드로, 모든 입력을 한 번에 읽어 처리합니다.
- */
-
 const fs = require('fs');
 
-// --- 입력 최적화 함수: 모든 입력을 한 번에 읽고 정수 토큰을 반환 ---
 function getOptimizedInput() {
     // 모든 입력을 읽어와서 공백 기준으로 분리
     const inputData = fs.readFileSync(0, 'utf8').trim().split(/\s+/).map(Number);
@@ -16,8 +10,6 @@ function getOptimizedInput() {
     
     return { readInt };
 }
-
-
 function solve() {
     const { readInt } = getOptimizedInput();
     

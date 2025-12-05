@@ -68,7 +68,6 @@ public class P002 {
             graph.get(u).add(v);
             graph.get(v).add(u); // 양방향 연결
         }
-
         // DFS를 통해 깊이와 부모 노드 설정
         // 루트 노드를 1로 가정, 깊이 0부터 시작, 부모 노드는 0
         dfs(1, 0, 0);
@@ -83,7 +82,6 @@ public class P002 {
             int v = Integer.parseInt(st.nextToken());
             sb.append(lca(u, v)).append("\n");
         }
-
         System.out.print(sb);
     }
 }

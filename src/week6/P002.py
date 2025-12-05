@@ -13,7 +13,6 @@ for _ in range(n - 1):
     graph[a].append(b)
     graph[b].append(a)
 
-
 # 루트 노드부터의 깊이 구하기
 def dfs(x, depth):
     visited[x] = True
@@ -24,7 +23,6 @@ def dfs(x, depth):
             continue
         parent[node] = x
         dfs(node, depth + 1)
-
 
 # 최소 공통 조상 찾기
 def lca(a, b):
@@ -41,12 +39,8 @@ def lca(a, b):
         b = parent[b]
 
     return a
-
-
 dfs(1, 0)
-
 m = int(input())
-
 for _ in range(m):
     a, b = map(int, input().split())
     print(lca(a, b))

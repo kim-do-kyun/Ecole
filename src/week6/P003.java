@@ -8,17 +8,12 @@ import java.util.StringTokenizer;
 import java.util.Stack;
 
 public class P003 {
-
-    // 전역 변수 선언
     static int N;                           // 노드의 개수
     static int LENGTH;                      // 희소 배열의 크기 (log2(N) + 1)
     static int[][] parent;                  // parent[노드][i]: 노드의 2^i번째 부모
     static int[] depth;                     // depth[노드]: 루트로부터의 깊이
     static ArrayList<ArrayList<Integer>> graph; // 인접 리스트로 그래프 표현
 
-    /**
-     * @brief 스택 기반 DFS를 통해 각 노드의 깊이와 1번째 부모(2^0)를 설정합니다.
-     */
     public static void calculateBaseInfo() {
         // (현재 노드, 깊이, 부모 노드)
         Stack<int[]> stack = new Stack<>();
@@ -47,9 +42,6 @@ public class P003 {
         }
     }
 
-    /**
-     * @brief 희소 배열(Sparse Array)을 동적 계획법으로 채웁니다.
-     */
     public static void fillSparseArray() {
         for (int i = 1; i < LENGTH; i++) {
             for (int j = 1; j <= N; j++) {
@@ -60,9 +52,6 @@ public class P003 {
         }
     }
 
-    /**
-     * @brief 이진 리프팅(Binary Lifting)을 사용하여 두 노드 a와 b의 최소 공통 조상(LCA)을 찾습니다.
-     */
     public static int lca(int a, int b) {
         // 1. b의 깊이가 더 깊거나 같도록 설정
         if (depth[a] > depth[b]) {

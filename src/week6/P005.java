@@ -17,12 +17,8 @@ public class P005 {
             return;
         }
 
-        // 파스칼 삼각형을 저장할 2차원 배열 (가변 배열)
-        // N번째 줄까지 계산하기 위해 크기 확보
         int[][] pascal = new int[N + 1][];
 
-        // 초기값 설정 (n=1 일 때: [1, 1])
-        // 파이썬 코드의 로직을 그대로 따름
         if (N > 1) {
             pascal[1] = new int[]{1, 1};
         }
@@ -42,8 +38,6 @@ public class P005 {
             pascal[depth][depth] = 1; // 마지막 원소
         }
 
-        // 결과 출력 (파이썬 코드의 마지막 계산식 반영)
-        // N-1행의 값을 이용해 N행 K열의 값을 도출
         int result = (pascal[N - 1][K - 1] + pascal[N - 1][K]) % 10007;
         System.out.println(result);
     }

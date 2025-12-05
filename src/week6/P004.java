@@ -6,13 +6,11 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 public class P004 {
-    // 모듈러 연산 상수
     static final int MOD = 10007;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
         // N, K 입력
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
